@@ -13,7 +13,9 @@ const Candidates = () => {
             <main>
                 <Navbar />
                 <Sidebar />
-                <h1>Candidates</h1>
+                <div className=" m-4">
+                    <h1 className=" text-2xl font-bold">Candidates</h1>
+                </div>
             </main>
         </ThemeProvider>
     );

@@ -13,7 +13,9 @@ const Tasks = () => {
             <main>
                 <Navbar />
                 <Sidebar />
-                <h1>Tasks</h1>
+                <div className=" m-4">
+                    <h1 className=" text-2xl font-bold">Task Board</h1>
+                </div>
             </main>
         </ThemeProvider>
     );

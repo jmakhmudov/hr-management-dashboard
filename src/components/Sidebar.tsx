@@ -7,7 +7,7 @@ const Sidebar = () => {
         <section className="relative p-4 flex">
             <Button className="" variant="ghost" asChild>
                 <Link href="/jobs">
-                    <BackpackIcon className="mr-2 h-4" /> Jobs
+                    <BackpackIcon className="mr-2 h-4" /> Job Listings
                 </Link>
             </Button>
 
@@ -19,7 +19,7 @@ const Sidebar = () => {
 
             <Button className="" variant="ghost" asChild>
                 <Link href="/tasks">
-                    <StopwatchIcon className="mr-2 h-4" />Tasks
+                    <StopwatchIcon className="mr-2 h-4" />Task Board
                 </Link>
             </Button>
         </section>

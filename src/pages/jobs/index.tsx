@@ -4,16 +4,23 @@ import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import '../../app/globals.css'
+import JobCard from "./JobCard";
+import { jobListings } from "@/data/jobListings";
 
-const Jobs = () => {
-
+const Jobs: React.FC = () => {
 
     return (
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <main>
                 <Navbar />
                 <Sidebar />
-                <h1>Jobs</h1>
+                <div className=" m-4">
+                    <h1 className=" text-2xl font-bold">Job Listings</h1>
+                </div>
+
+                <section className="m-4 flex flex-col sm:grid gap-4 grid-cols-[repeat(auto-fill,minmax(400px,1fr))] mt-12">
+                    {jobListings.map((job) => <JobCard job={job} />)}
+                </section>
             </main>
         </ThemeProvider>
 
