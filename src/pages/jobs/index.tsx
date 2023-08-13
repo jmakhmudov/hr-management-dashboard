@@ -15,11 +15,11 @@ const Jobs: React.FC = () => {
                 <Navbar />
                 <Sidebar />
                 <div className=" m-4">
-                    <h1 className=" text-2xl font-bold">Job Listings</h1>
+                    <h1 className=" text-4xl font-bold">Job Listings</h1>
                 </div>
 
                 <section className="m-4 flex flex-col sm:grid gap-4 grid-cols-[repeat(auto-fill,minmax(400px,1fr))] mt-12">
-                    {jobListings.map((job) => <JobCard job={job} />)}
+                    {jobListings.map((job, id) => <JobCard key={id} job={job} />)}
                 </section>
             </main>
         </ThemeProvider>
