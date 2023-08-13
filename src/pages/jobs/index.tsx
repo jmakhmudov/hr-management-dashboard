@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import '../../app/globals.css'
-import JobCard from "./JobCard";
+import JobCard from "../../components/JobCard";
 import { jobListings } from "@/data/jobListings";
 
 const Jobs: React.FC = () => {
