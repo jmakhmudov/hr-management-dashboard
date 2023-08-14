@@ -5,7 +5,6 @@ import {
     DialogContent,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
 } from "@/components/ui/dialog";
 
 const Alert = () => {
@@ -14,10 +13,10 @@ const Alert = () => {
         <Dialog defaultOpen>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle className=" text-2xl font-bold">Header</DialogTitle>
+                    <DialogTitle className=" text-2xl font-bold">Demo Project</DialogTitle>
                 </DialogHeader>
                 <section>
-                    description
+                    This is a demo version of the Job Board project. This is a client only demo which means all data on the page is stored locally instead of accessing an API but other than that it is identical in every way.
                 </section>
             </DialogContent>
         </Dialog>
