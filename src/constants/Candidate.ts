@@ -1,11 +1,10 @@
-export interface Job {
+export interface Candidate {
     title: string;
-    company: string;
+    name: string;
     location: string;
     minSalary: number;
     jobType: "Full Time" | "Part Time" | "Internship";
     experienceLevel: "Junior" | "Middle" | "Senior";
     description: string;
     shortDescription: string;
-    website: string;
 }
