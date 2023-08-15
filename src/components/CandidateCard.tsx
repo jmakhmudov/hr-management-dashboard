@@ -12,7 +12,16 @@ import { Candidate } from "@/constants/Candidate";
 import { formatSalary } from "@/helpers/formatSalary";
 import { BackpackIcon, CalendarIcon, LightningBoltIcon } from "@radix-ui/react-icons";
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
 
 
 interface CandidateProps {
@@ -50,7 +59,36 @@ const CandidateCard: React.FC<CandidateProps> = ({ candidate }) => {
                 <p>{candidate.shortDescription}</p>
             </CardContent>
             <CardFooter className=" p-6 pt-0 flex gap-2 items-stretch justify-end">
-                <Button>View More</Button>
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <Button>View More</Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                        <DialogHeader>
+                            <DialogTitle className=" text-2xl font-bold">{candidate.title}</DialogTitle>
+                            <DialogDescription>{candidate.name}</DialogDescription>
+                            <DialogDescription>{candidate.location}</DialogDescription>
+                            <DialogDescription>
+                                <div className=" flex gap-2">
+                                    <Badge variant="secondary">
+                                        <LightningBoltIcon className="mr-1 h-3" /> {formatSalary(candidate.minSalary)}
+                                    </Badge>
+                                    <Badge variant="secondary">
+                                        <CalendarIcon className="mr-1 h-3" /> {candidate.jobType}
+                                    </Badge>
+                                    <Badge variant="secondary">
+                                        <BackpackIcon className="mr-1 h-3" /> {candidate.experienceLevel}
+                                    </Badge>
+                                </div>
+                            </DialogDescription>
+                        </DialogHeader>
+
+                        <section>
+                            <div>{candidate.shortDescription}</div>
+                            <div>{candidate.description}</div>
+                        </section>
+                    </DialogContent>
+                </Dialog>
             </CardFooter>
         </Card>
     )

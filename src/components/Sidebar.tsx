@@ -16,12 +16,6 @@ const Sidebar = () => {
                     <PersonIcon className="mr-2 h-4" /> Candidates
                 </Link>
             </Button>
-
-            <Button className="" variant="ghost" asChild>
-                <Link href="/tasks">
-                    <StopwatchIcon className="mr-2 h-4" />Task Board
-                </Link>
-            </Button>
         </section>
     );
 }
